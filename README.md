@@ -18,6 +18,10 @@ you want/need to:
 EventSource = SSE;
 ```
 
+This fork adds the following functionality:
+
+* Process streams with JSON objects separate with line breaks too (content types `application/jsonl`, `application/stream+json` and `application/x-ndjson`). The content of the event is otherwise identical (`type`, `id`, `data` and `lastEventId`). This can be used if the server supports streaming, but doesn't send the events according to the SSE standard (content type `text/event-stream`), but uses the simpler JSONL (NDJSON) formatting.
+
 ## Usage
 
 ### Import
